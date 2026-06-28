@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zoom One-Click Launcher</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="app-header">
+        <div>
+          <p class="eyebrow">Local meeting launcher</p>
+          <h1>Zoom One-Click Launcher</h1>
+        </div>
+        <p class="storage-note">保存先: このブラウザのLocalStorage</p>
+      </header>
+
+      <section class="workspace" aria-label="Zoom会議管理">
+        <form class="meeting-form" id="meeting-form" autocomplete="off">
+          <div class="form-heading">
+            <h2 id="form-title">会議を登録</h2>
+            <button class="secondary-button" id="cancel-edit-button" type="button" hidden>編集を終了</button>
+          </div>
+          <input id="editing-id" name="editingId" type="hidden">
+
+          <label>
+            <span>会議名</span>
+            <input id="title" name="title" type="text" placeholder="例: 朝会" required>
+          </label>
+
+          <label>
+            <span>Zoom URL</span>
+            <input id="url" name="url" type="url" placeholder="https://zoom.us/j/..." required>
+          </label>
+
+          <div class="split-fields">
+            <label>
+              <span>ミーティングID</span>
+              <input id="meeting-id" name="meetingId" type="text" inputmode="numeric" placeholder="000 0000 0000">
+            </label>
+
+            <label>
+              <span>パスコード</span>
+              <input id="passcode" name="passcode" type="password" placeholder="任意">
+            </label>
+          </div>
+
+          <label>
+            <span>メモ</span>
+            <textarea id="notes" name="notes" rows="3" placeholder="例: 毎週月曜 10:00"></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="primary-button" id="save-button" type="submit">保存</button>
+            <button class="secondary-button" type="reset">クリア</button>
+          </div>
+        </form>
+
+        <section class="meeting-list-panel" aria-labelledby="meeting-list-title">
+          <div class="list-heading">
+            <div>
+              <h2 id="meeting-list-title">保存済み会議</h2>
+              <p id="meeting-count">0件</p>
+            </div>
+            <div class="list-tools">
+              <button class="secondary-button" id="export-button" type="button">書き出し</button>
+              <button class="secondary-button" id="import-button" type="button">読み込み</button>
+              <button class="secondary-button" id="sort-button" type="button">新しい順</button>
+              <button class="danger-button" id="clear-all-button" type="button">全削除</button>
+              <input id="import-file" type="file" accept="application/json,.json" hidden>
+            </div>
+          </div>
+
+          <div class="empty-state" id="empty-state">
+            <p>まだ会議が登録されていません。</p>
+          </div>
+
+          <div class="meeting-list" id="meeting-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <template id="meeting-template">
+      <article class="meeting-item">
+        <div class="meeting-main">
+          <div class="meeting-title-row">
+            <h3></h3>
+            <button class="icon-button delete-button" type="button" aria-label="会議を削除" title="削除">×</button>
+          </div>
+          <p class="meeting-meta"></p>
+          <p class="meeting-notes"></p>
+        </div>
+        <div class="meeting-actions">
+          <button class="primary-button join-button" type="button">参加</button>
+          <button class="secondary-button reveal-button" type="button">PW表示</button>
+          <button class="secondary-button copy-button" type="button">PWコピー</button>
+          <button class="secondary-button edit-button" type="button">編集</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
