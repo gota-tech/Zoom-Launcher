@@ -12,7 +12,7 @@
 
 ## Test Cases
 
-- [x] `app/index.html` または `open-zoom-launcher.command` でアプリを開ける
+- [x] `docs/index.html` または `open-zoom-launcher.command` でアプリを開ける
 - [x] ダミー会議を登録できる
 - [x] 登録後に一覧へ表示される
 - [x] ページ再読み込み後も一覧に残る

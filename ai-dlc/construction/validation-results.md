@@ -9,7 +9,7 @@ Environment:
 
 Checks:
 
-- [x] JavaScript syntax check passed with `node --check app/script.js`
+- [x] JavaScript syntax check passed with `node --check docs/script.js`
 - [x] Required DOM selectors in `script.js` exist in `index.html`
 - [x] LocalStorage key is scoped to `zoom-one-click-meetings`
 - [x] Passcode field uses password input on registration
@@ -19,7 +19,7 @@ Checks:
 
 Manual Check Recommended:
 
-- Open `app/index.html` in a browser
+- Open `docs/index.html` in a browser
 - Register a dummy meeting
 - Reload the page and confirm the meeting remains
 - Press `PW表示` and confirm the passcode toggles
@@ -34,7 +34,7 @@ Environment:
 
 Checks:
 
-- [x] JavaScript syntax check passed with `node --check app/script.js`
+- [x] JavaScript syntax check passed with `node --check docs/script.js`
 - [x] Required DOM selectors for edit, import, export, and copy controls exist in `index.html`
 - [x] Edit mode reuses the registration form
 - [x] JSON export writes an app/version wrapper and the current meetings array
@@ -53,7 +53,7 @@ Manual Check Recommended:
 
 Checks:
 
-- [x] JavaScript syntax check passed with `node --check app/script.js`
+- [x] JavaScript syntax check passed with `node --check docs/script.js`
 - [x] `open-zoom-launcher.command` was added for macOS double-click launch
 - [x] Manual test checklist was added at `ai-dlc/operation/manual-test.md`
 - [x] Repository scan found only dummy Zoom URLs, not real meeting URLs

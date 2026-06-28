@@ -10,3 +10,4 @@
 - テスト後の片付け用に全削除機能を追加
 - ユーザーがManual Test全項目OKを確認
 - Release ChecklistをReady for local personal useへ更新
+- GitHub Pages公開元として使えるよう、アプリ配置を `docs/` に変更

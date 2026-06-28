@@ -11,9 +11,11 @@
 
 ## 起動方法
 
-`app/index.html` をブラウザで開きます。ローカル静的ファイルとして動くため、開発サーバーは不要です。
+`docs/index.html` をブラウザで開きます。ローカル静的ファイルとして動くため、開発サーバーは不要です。
 
 macOSでは `open-zoom-launcher.command` をダブルクリックして開くこともできます。
+
+GitHub Pagesでは、公開元を `main` ブランチの `/docs` に設定します。
 
 ## Bolt 001で実装済み
 

@@ -2,7 +2,7 @@
 
 ## Local Use
 
-1. `app/index.html` をブラウザで開く
+1. `docs/index.html` をブラウザで開く
    - macOSでは `open-zoom-launcher.command` をダブルクリックしてもよい
 2. 会議情報を登録する
 3. 参加ボタンからZoom会議を開く

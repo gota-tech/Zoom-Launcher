@@ -2,9 +2,9 @@
 
 ## Initial Architecture
 
-- `app/index.html`: 画面構造
-- `app/styles.css`: 見た目
-- `app/script.js`: 会議データ管理、保存、画面操作
+- `docs/index.html`: 画面構造
+- `docs/styles.css`: 見た目
+- `docs/script.js`: 会議データ管理、保存、画面操作
 
 ## Mob Construction Checkpoints
 
